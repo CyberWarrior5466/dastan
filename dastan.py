@@ -10,8 +10,8 @@ class Dastan:
         self._Board = []
         self._Players = []
         self._MoveOptionOffer = []
-        self._Players.append(Player("Player One", 1))
-        self._Players.append(Player("Player Two", -1))
+        self._Players.append(Player(input("Player One enter name: "), +1))
+        self._Players.append(Player(input("Player Two enter name: "), -1))
         self.__CreateMoveOptions()
         self._NoOfRows = R
         self._NoOfColumns = C
@@ -196,11 +196,24 @@ class Dastan:
         self._Board[self.__GetIndexOfSquare(self._NoOfRows * 10 + (self._NoOfColumns // 2 + 1))].SetPiece(CurrentPiece)
 
     def __CreateMoveOptionOffer(self):
+        self._MoveOptionOffer.append("tibblecross")
         self._MoveOptionOffer.append("jazair")
         self._MoveOptionOffer.append("chowkidar")
         self._MoveOptionOffer.append("cuirassier")
         self._MoveOptionOffer.append("ryott")
         self._MoveOptionOffer.append("faujdar")
+
+    def __CreateTibbleCrossMoveOption(self, Direction):
+        NewMoveOption = MoveOption("tibblecorss")
+        NewMove = Move(2 * Direction, 2 * Direction)
+        NewMoveOption.AddToPossibleMoves(NewMove)
+        NewMove = Move(2 * Direction, -2 * Direction)
+        NewMoveOption.AddToPossibleMoves(NewMove)
+        NewMove = Move(-2 * Direction, 2 * Direction)
+        NewMoveOption.AddToPossibleMoves(NewMove)
+        NewMove = Move(-2 * Direction, -2 * Direction)
+        NewMoveOption.AddToPossibleMoves(NewMove)
+        return NewMoveOption
 
     def __CreateRyottMoveOption(self, Direction):
         NewMoveOption = MoveOption("ryott")
@@ -273,7 +286,9 @@ class Dastan:
         return NewMoveOption
 
     def __CreateMoveOption(self, Name, Direction):
-        if Name == "chowkidar":
+        if Name == "tibblecross":
+            return self.__CreateTibbleCrossMoveOption(Direction)
+        elif Name == "chowkidar":
             return self.__CreateChowkidarMoveOption(Direction)
         elif Name == "ryott":
             return self.__CreateRyottMoveOption(Direction)
@@ -285,12 +300,14 @@ class Dastan:
             return self.__CreateCuirassierMoveOption(Direction)
 
     def __CreateMoveOptions(self):
+        self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("tibblecross", 1))
         self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("ryott", 1))
         self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("chowkidar", 1))
         self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("cuirassier", 1))
         self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("faujdar", 1))
         self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("jazair", 1))
         self._Players[1].AddToMoveOptionQueue(self.__CreateMoveOption("ryott", -1))
+        self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("tibblecross", -1))
         self._Players[1].AddToMoveOptionQueue(self.__CreateMoveOption("chowkidar", -1))
         self._Players[1].AddToMoveOptionQueue(self.__CreateMoveOption("jazair", -1))
         self._Players[1].AddToMoveOptionQueue(self.__CreateMoveOption("faujdar", -1))
