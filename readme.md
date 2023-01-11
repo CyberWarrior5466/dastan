@@ -4,8 +4,8 @@
 
 
 ## Questions
-Taken from the [wikipedia](https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_1/Skeleton_program/2023)
-lines ending with a `##` have been changed.
+Taken from the [dastan wiki](https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_1/Skeleton_program/2023)
+
 
 1. At the beginning of the game allow each player to enter their own name instead of `Player One` or `Player Two`
 
@@ -13,6 +13,7 @@ lines ending with a `##` have been changed.
    <summary>View Solution</summary>
  
    ```python
+   # note lines ending in a `##` have been changed
    class Dastan:
       def __init__(self, R, C, NoOfPieces):
          self._Board = []
@@ -42,6 +43,8 @@ lines ending with a `##` have been changed.
    <summary>View Solution</summary>
  
    ```python
+   # note lines ending in a `##` have been changed
+   
    def __CreateMoveOptionOffer(self):
       self._MoveOptionOffer.append("tibblecross")  ##
       self._MoveOptionOffer.append("jazair")
