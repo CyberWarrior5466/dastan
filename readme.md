@@ -1,8 +1,10 @@
-## Dastan
+### Table of contents
+- [Questions](#questions)
+- [UML diagram](#uml-diagram)
 
-*stolen from [here](https://www.computingatschool.org.uk/resource-library/2022/september/aqa-skeleton-code-2023-dastan-uml)*
-![](dastan%20UML.drawio.png)
 
+## Questions
+Taken from the [wikipedia](https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_1/Skeleton_program/2023)
 
 1. At the beginning of the game allow each player to enter their own name instead of `Player One` or `Player Two`
 
@@ -71,6 +73,8 @@
 
    </details>
 
-
+## UML diagram
+*stolen from [here](https://www.computingatschool.org.uk/resource-library/2022/september/aqa-skeleton-code-2023-dastan-uml)*
+![](dastan%20UML.drawio.png)
 
    
