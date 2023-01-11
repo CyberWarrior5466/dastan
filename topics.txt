@@ -1,0 +1,54 @@
+Topics:
+Section A:
+    ◦ Queues
+    ◦ Stacks
+    ◦ Logic puzzles
+    ◦ Graphs
+    ◦ Trees
+    ◦ Dijkstra's algorithm
+    ◦ Trace tables
+    ◦ Recursion
+ 
+Section B:
+    ◦ MOD
+    ◦ DIV
+    ◦ String handling
+    ◦ Lists
+ 
+Section C:
+    ◦ Identifier
+    ◦ Value
+    ◦ Hierarchy diagrams
+    ◦ Class diagrams
+    ◦ Classes
+        ▪ Super
+        ▪ Attributes
+        • Protected
+        ▪ Methods
+        • Private
+        • Public
+        ▪ Objects
+        ▪ Instantiation
+    ◦ Subroutines
+        ▪ Parameters
+        ▪ Arguments
+        ▪ return
+    ◦ OOP:
+        ▪ Polymorphism (Overriding)
+        ▪ Inheritance
+    ◦ lists - 2D
+    ◦ Metadata
+ 
+Section D:
+    1. Custom player name - 2
+    2. New move - 4
+    3. New move - 4
+    4. 'wild card' award - 5
+    5. Spy on your or opponents queue of moves - 5
+    6. Add error handling - 5
+    7. Limit 'accept the offer' times - 5
+    8. Undo last move - 5
+    9. New attribute - 7
+    10. Destroy piece and replace with new Kotla - 4
+    11. Make changes to move queue - 9
+    12. Reclaim lost pieces if reach back of opponents board - 7

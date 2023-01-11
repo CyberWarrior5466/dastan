@@ -23,13 +23,13 @@
 
 2. Add a new move called `TibbleCross`. This move allows a piece to move up two spaces diagonally.
 
-   $$\begin{bmatrix}
-   \mathrm{X}& &   & & \mathrm{X} \\
-           & &   & &            \\
-           & & * & &            \\
-           & &   & &            \\
-   \mathrm{X}& &   & & \mathrm{X}
-   \end{bmatrix}$$
+   ```
+   X . . . X
+   . . . . .
+   . . * . .
+   . . . . .
+   X . . . X
+   ```
    
    -  This move should appear first in the queue
  
@@ -70,3 +70,7 @@
    ```
 
    </details>
+
+
+
+   
