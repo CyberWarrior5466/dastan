@@ -74,7 +74,7 @@ Taken from the [wikipedia](https://en.wikibooks.org/wiki/A-level_Computing/AQA/P
    </details>
 
 ## UML diagram
-*stolen from [here](https://www.computingatschool.org.uk/resource-library/2022/september/aqa-skeleton-code-2023-dastan-uml)*
+Taken from [here](https://www.computingatschool.org.uk/resource-library/2022/september/aqa-skeleton-code-2023-dastan-uml)
 ![](dastan%20UML.drawio.png)
 
    
