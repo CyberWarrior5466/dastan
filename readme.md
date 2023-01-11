@@ -5,6 +5,7 @@
 
 ## Questions
 Taken from the [wikipedia](https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_1/Skeleton_program/2023)
+lines ending with a `##` have been changed.
 
 1. At the beginning of the game allow each player to enter their own name instead of `Player One` or `Player Two`
 
@@ -61,14 +62,30 @@ Taken from the [wikipedia](https://en.wikibooks.org/wiki/A-level_Computing/AQA/P
    def __CreateMoveOption(self, Name, Direction):
       if Name == "tibblecross":                                ##
          return self.__CreateTibbleCrossMoveOption(Direction)  ##
-      if Name == "chowkidar":
-      ...
+      elif Name == "chowkidar":                                ##
+         return self.__CreateChowkidarMoveOption(Direction)
+      elif Name == "ryott":
+         return self.__CreateRyottMoveOption(Direction)
+      elif Name == "faujdar":
+         return self.__CreateFaujdarMoveOption(Direction)
+      elif Name == "jazair":
+         return self.__CreateJazairMoveOption(Direction)
+      else:
+         return self.__CreateCuirassierMoveOption(Direction)
    
    def __CreateMoveOptions(self):
-      self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("tibblecross", +1))   ##
-      ...
+      self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("tibblecross", 1))   ##
+      self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("ryott", 1))
+      self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("chowkidar", 1))
+      self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("cuirassier", 1))
+      self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("faujdar", 1))
+      self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("jazair", 1))
       self._Players[1].AddToMoveOptionQueue(self.__CreateMoveOption("tibblecross", -1))   ##
-      ...
+      self._Players[1].AddToMoveOptionQueue(self.__CreateMoveOption("ryott", -1))
+      self._Players[1].AddToMoveOptionQueue(self.__CreateMoveOption("chowkidar", -1))
+      self._Players[1].AddToMoveOptionQueue(self.__CreateMoveOption("jazair", -1))
+      self._Players[1].AddToMoveOptionQueue(self.__CreateMoveOption("faujdar", -1))
+      self._Players[1].AddToMoveOptionQueue(self.__CreateMoveOption("cuirassier", -1))
    ```
 
    </details>
