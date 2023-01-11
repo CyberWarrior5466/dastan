@@ -45,16 +45,16 @@
       ...
    
    def __CreateTibbleCrossMoveOption(self, Direction):
-      NewMoveOption = MoveOption("tibblecorss")
-      NewMove = Move(2 * Direction, 2 * Direction)
-      NewMoveOption.AddToPossibleMoves(NewMove)
-      NewMove = Move(2 * Direction, -2 * Direction)
-      NewMoveOption.AddToPossibleMoves(NewMove)
-      NewMove = Move(-2 * Direction, 2 * Direction)
-      NewMoveOption.AddToPossibleMoves(NewMove)
-      NewMove = Move(-2 * Direction, -2 * Direction)
-      NewMoveOption.AddToPossibleMoves(NewMove)
-      return NewMoveOption
+      NewMoveOption = MoveOption("tibblecorss")       ##
+      NewMove = Move(2 * Direction, 2 * Direction)    ##
+      NewMoveOption.AddToPossibleMoves(NewMove)       ##
+      NewMove = Move(2 * Direction, -2 * Direction)   ##
+      NewMoveOption.AddToPossibleMoves(NewMove)       ##
+      NewMove = Move(-2 * Direction, 2 * Direction)   ##
+      NewMoveOption.AddToPossibleMoves(NewMove)       ##
+      NewMove = Move(-2 * Direction, -2 * Direction)  ##
+      NewMoveOption.AddToPossibleMoves(NewMove)       ##
+      return NewMoveOption                            ##
    
    def __CreateMoveOption(self, Name, Direction):
       if Name == "tibblecross":                                ##
@@ -63,9 +63,9 @@
       ...
    
    def __CreateMoveOptions(self):
-      self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("tibblecross", +1))
+      self._Players[0].AddToMoveOptionQueue(self.__CreateMoveOption("tibblecross", +1))   ##
       ...
-      self._Players[1].AddToMoveOptionQueue(self.__CreateMoveOption("tibblecross", -1))
+      self._Players[1].AddToMoveOptionQueue(self.__CreateMoveOption("tibblecross", -1))   ##
       ...
    ```
 
